@@ -24,6 +24,11 @@ Após subir os serviços com o docker-compose usar os seguintes endereços acess
 [prometheus.example.com](http://prometheus.example.com)<br />
 [blackbox.example.com](http://blackbox.example.com)
 
+### Login Grafana
+Para acesso ao grafana usar senha e usuários padrão.
+USERNAME: admin
+PASSWORD: admin
+
 ### Referências
 [https://github.com/kaihendry/pingprom](https://github.com/kaihendry/pingprom)<br />
 [https://prometheus.io/docs/guides/multi-target-exporter/](https://prometheus.io/docs/guides/multi-target-exporter/)<br />

@@ -27,5 +27,5 @@ Após subir os serviços com o docker-compose usar os seguintes endereços acess
 ### Referências
 [https://github.com/kaihendry/pingprom](https://github.com/kaihendry/pingprom)<br />
 [https://prometheus.io/docs/guides/multi-target-exporter/](https://prometheus.io/docs/guides/multi-target-exporter/)<br />
-[Monitoramento de aplicações com Prometheus e Grafana](https://www.udemy.com/share/101IwkAkMec1pXQ3o=/)
+[Monitoramento de aplicações com Prometheus e Grafana](https://www.udemy.com/share/101IwkAkMec1pXQ3o=/)<br />
 [https://medium.com/the-telegraph-engineering/how-prometheus-and-the-blackbox-exporter-makes-monitoring-microservice-endpoints-easy-and-free-of-a986078912ee](https://medium.com/the-telegraph-engineering/how-prometheus-and-the-blackbox-exporter-makes-monitoring-microservice-endpoints-easy-and-free-of-a986078912ee)

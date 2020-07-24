@@ -1,7 +1,6 @@
 version: '2.2'
 
 volumes: 
-  grafana-storage:
   prometheus:
   blackbox:
 
@@ -42,11 +41,22 @@ services:
       production-network:
         ipv4_address: "192.168.240.6"
 
+  # grafana:
+  #   image: grafana/grafana
+  #   volumes: 
+  #     - grafana-storage:/var/lib/grafana
+  #   networks:
+  #     production-network:
+  #       ipv4_address: "192.168.240.5"
+
   grafana:
     image: grafana/grafana
-    volumes: 
-      - grafana-storage:/var/lib/grafana
-    networks:
+    volumes:
+      - ./grafana:/etc/grafana/provisioning/
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GF_SECURITY_ADMIN_PASSWORD}
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    networks: 
       production-network:
         ipv4_address: "192.168.240.5"
 

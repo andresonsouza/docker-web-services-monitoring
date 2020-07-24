@@ -25,8 +25,8 @@ Após subir os serviços com o docker-compose usar os seguintes endereços acess
 [blackbox.example.com](http://blackbox.example.com)
 
 ### Login Grafana
-Para acesso ao grafana usar senha e usuários padrão.
-USERNAME: admin
+Para acesso ao grafana usar senha e usuários padrão.<br />
+USERNAME: admin<br />
 PASSWORD: admin
 
 ### Referências

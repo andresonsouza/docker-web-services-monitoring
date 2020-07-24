@@ -10,6 +10,9 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx-proxy/conf.d:/etc/nginx/conf.d:ro
+    networks: 
+      production-network:
+        ipv4_address: "192.168.240.10"
     ports:
         - "80:80"
 
@@ -40,14 +43,6 @@ services:
     networks:
       production-network:
         ipv4_address: "192.168.240.6"
-
-  # grafana:
-  #   image: grafana/grafana
-  #   volumes: 
-  #     - grafana-storage:/var/lib/grafana
-  #   networks:
-  #     production-network:
-  #       ipv4_address: "192.168.240.5"
 
   grafana:
     image: grafana/grafana

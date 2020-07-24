@@ -1,4 +1,4 @@
-# Endpoints a serem monitorados
+# Adicione os endpoints que precisam ser monitorados aqui
 
 - targets: 
   - http://www.marquesconsult.com.br

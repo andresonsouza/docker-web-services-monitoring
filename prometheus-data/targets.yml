@@ -1,9 +1,4 @@
 # Adicione os endpoints que precisam ser monitorados aqui
 
 - targets: 
-  - http://www.marquesconsult.com.br
-  - https://www.marquesconsult.com.br
-  - http://www.marquesconsult.com.br0997
-  - http://192.168.240.3:3001
-  - http://192.168.240.3:3030
-  - https://github.com
+  - https://madlinux.now.sh/

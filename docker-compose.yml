@@ -1,7 +1,6 @@
 version: '2.2'
 
 volumes: 
-  prometheus:
   blackbox:
 
 services: 
@@ -29,7 +28,6 @@ services:
     image: prom/prometheus
     volumes: 
       - ./prometheus-data:/prometheus-data
-      - prometheus:/prometheus
     command: ['--config.file=/prometheus-data/prometheus.yml']
     networks:
       production-network:

@@ -4,7 +4,6 @@ Suba um ambiente de monitoramento com apenas dois comandos.
 
 ### Adicione a resolução de nomes ao arquivo /etc/hosts
 ```bash
-cd scripts
 sudo ./script-hosts.sh
 ```
 

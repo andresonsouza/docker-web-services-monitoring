@@ -1,4 +1,4 @@
 # Adicione os endpoints que precisam ser monitorados aqui
 
 - targets: 
-  - https://madlinux.now.sh/
+  - http://192.168.240.3:3001/

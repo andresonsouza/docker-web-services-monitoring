@@ -1,8 +1,5 @@
 version: '2.2'
 
-volumes: 
-  blackbox:
-
 services: 
 
   nginx:

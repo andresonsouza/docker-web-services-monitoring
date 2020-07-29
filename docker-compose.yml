@@ -1,56 +1,38 @@
-version: '2.2'
+version: "3.2"
 
-services: 
-
+services:
   nginx:
     image: nginx:latest
     volumes:
       - ./nginx-proxy/conf.d:/etc/nginx/conf.d:ro
-    networks: 
-      production-network:
-        ipv4_address: "192.168.240.10"
     ports:
-        - "80:80"
+      - 80:80
+    depends_on:
+      - app
+      - prometheus
+      - blackbox
+      - grafana
 
   app:
     build:
       dockerfile: app.Dockerfile
       context: ./app/
     image: asouza/app
-    networks:
-      production-network:
-        ipv4_address: "192.168.240.3"
 
   prometheus:
     image: prom/prometheus
-    volumes: 
+    volumes:
       - ./prometheus-data:/prometheus-data
-    command: ['--config.file=/prometheus-data/prometheus.yml']
-    networks:
-      production-network:
-        ipv4_address: "192.168.240.4"
+    command: ["--config.file=/prometheus-data/prometheus.yml"]
 
   blackbox:
-    build: 
+    build:
       dockerfile: blackbox.Dockerfile
       context: ./blackbox/
     image: asouza/blackbox
-    networks:
-      production-network:
-        ipv4_address: "192.168.240.6"
 
   grafana:
     image: grafana/grafana
     volumes:
       - ./grafana:/etc/grafana/provisioning/
-    networks: 
-      production-network:
-        ipv4_address: "192.168.240.5"
-
-networks:
-  production-network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: "192.168.240.0/24"
-          gateway: "192.168.240.1"
+      
